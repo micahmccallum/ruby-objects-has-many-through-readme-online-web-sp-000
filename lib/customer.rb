@@ -28,7 +28,6 @@ class Customer
       waiters_list << meal.waiter if meal.customer.name == self.name
     end
     waiters_list
-
   end
 
 end
