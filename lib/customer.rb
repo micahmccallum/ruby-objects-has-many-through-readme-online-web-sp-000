@@ -23,6 +23,9 @@ class Customer
   end
 
   def waiters
+    testWaiter = Meal.all.select { |meal| meal.waiter.name == self}
+    binding.pry
+
   end
 
 end
