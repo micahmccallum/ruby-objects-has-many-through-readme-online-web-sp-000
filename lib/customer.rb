@@ -23,8 +23,11 @@ class Customer
   end
 
   def waiters
-    testWaiter = Meal.all.select { |meal| meal.waiter.name == self}
-    binding.pry
+    waiters_list = []
+    Meal.all.each do |meal|
+      waiters_list << meal.waiter
+    end
+    waiters_list
 
   end
 
