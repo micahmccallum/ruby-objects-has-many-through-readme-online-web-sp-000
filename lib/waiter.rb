@@ -22,6 +22,8 @@ class Waiter
   end
 
   def best_tipper
-    binding.pry
+    bestTipMeal = Meal.all.first
+    Meal.all.each do |meal|
+      bestTipMeal = meal if meal.tip > bestTipMeal.tip
   end
 end
