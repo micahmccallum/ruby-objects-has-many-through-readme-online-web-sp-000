@@ -1,3 +1,4 @@
+require 'pry'
 class Customer
   attr_accessor :name, :age
 
@@ -13,4 +14,19 @@ class Customer
     @@all
   end
 
+  def new_meal(waiter, total, tip = 0)
+    Meal.new(waiter, self, total, tip)
+  end
+
+  def meals
+    Meal.all.select { |meal| meal.customer.name == self.name }
+  end
+
+  def waiters
+    waiters_list = []
+    Meal.all.each do |meal|
+      waiters_list << meal.waiter if meal.customer.name == self.name
+    end
+    waiters_list
+  end
 end
