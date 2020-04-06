@@ -20,7 +20,7 @@ class Customer
 
   def meals
     binding.pry
-    Meal.all.collect { |meal| meal.customer == self.name }
+    Meal.all.collect { |meal| meal.customer.name == self.name }
   end
 
 end
