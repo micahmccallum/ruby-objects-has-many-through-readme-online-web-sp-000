@@ -25,5 +25,7 @@ class Waiter
     bestTipMeal = Meal.all.first
     Meal.all.each do |meal|
       bestTipMeal = meal if meal.tip > bestTipMeal.tip
+    end
+    bestTipMeal.customer
   end
 end
