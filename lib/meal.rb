@@ -10,7 +10,7 @@ class Meal
     @tip = tip
   end
 
-  def self.all 
-    @@all 
+  def self.all
+    @@all
   end
 end
