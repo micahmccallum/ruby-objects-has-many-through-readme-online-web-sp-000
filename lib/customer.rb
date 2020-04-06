@@ -17,4 +17,8 @@ class Customer
     Meal.new(waiter, self, total, tip)
   end
 
+  def meals
+    self.all
+  end
+
 end
