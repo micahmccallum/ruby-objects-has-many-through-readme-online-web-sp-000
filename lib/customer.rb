@@ -29,5 +29,4 @@ class Customer
     end
     waiters_list
   end
-
 end
