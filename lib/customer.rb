@@ -25,7 +25,7 @@ class Customer
   def waiters
     waiters_list = []
     Meal.all.each do |meal|
-      waiters_list << meal.waiter
+      waiters_list << meal.waiter if meal.customer.name == self.name
     end
     waiters_list
 
