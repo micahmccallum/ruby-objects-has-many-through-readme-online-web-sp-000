@@ -19,9 +19,9 @@ class Customer
   end
 
   def meals
-
-    testMeals = Meal.all.select { |meal| meal.customer.name == self.name }
-
+    Meal.all.select { |meal| meal.customer.name == self.name }
   end
+
+  def waiters
 
 end
