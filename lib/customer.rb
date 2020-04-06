@@ -21,7 +21,7 @@ class Customer
   def meals
 
     testMeals = Meal.all.select { |meal| meal.customer.name == self.name }
-    binding.pry
+    
   end
 
 end
