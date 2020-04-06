@@ -22,7 +22,6 @@ class Waiter
   end
 
   def best_tipper
-
+    binding.pry
   end
-
 end
